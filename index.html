@@ -7,20 +7,51 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class=“navbar“> 
-   		<h1>Portfolio</h1>
-   		<nav> 
-   			<ul class=“navlinks“>
-           		<li> <a href=“#">About Me</li>
-           		<li> <a href=“#">Projects</li>
-           		<li> <a href=“#">Contact Me</li>
-       		</ul>
-   		</nav>
-    </div>
+    <nav class="navbar">
+		<div class="navcontent">
+			<div>
+				<img class="logo" src="images/chevre transparent.png">
+			</div>
+																		                
+			<ul class="menu-list">
+				<div class="icon cancel-btn">
+					<i class="fas fa-times"></i> 
+				</div>
+				<li><a href="index.html" class="hover">Home</a></li>
+				<li><a href="menu.html" class="hover">Menu</a></li>
+				<li><a href="location.html"class="hover">Location</a></li>
+			</ul>
+			<div class="icon menu-btn">
+				<i class="fas fa-bars"></i>
+			</div>
+		</div>
+	</nav>																																								
+    
     <div class="content">
         <h1> Hi There! </h1>
    		<p> Are you looking for something modern, simple, yet meaningful in design? If yes, you're in the right place! </p>
    		<p> I'm Feby Theresia, a Final Year Visual Communication Design student. </p>
     </div>
 </body>
+<script>
+	const body = document.querySelector("body");
+	const navbar = document.querySelector(".navbar");
+	const menu = document.querySelector(".menu-list");
+	const menuBtn = document.querySelector(".menu-btn");
+	const cancelBtn = document.querySelector(".cancel-btn");
+	menuBtn.onclick = () => {
+		menu.classList.add("active");
+		menuBtn.classList.add("hide");
+		body.classList.add("disabledScroll");
+	}
+	cancelBtn.onclick = () => {
+		menu.classList.remove("active");
+		menuBtn.classList.remove("hide");
+		body.classList.remove("disabledScroll");
+	}
+	window.onscroll = () => {
+		this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+	}
+</script>
+
 </html>
