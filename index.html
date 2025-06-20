@@ -3,55 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feby's Website</title>
+    <title>Profile Card</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <nav class="navbar">
-		<div class="navcontent">
-			<div>
-				<h1>Feby Theresia</h1>
-			</div>
-																		                
-			<ul class="menu-list">
-				<div class="icon cancel-btn">
-					<i class="fas fa-times"></i> 
-				</div>
-				<li><a href="index.html" class="hover">About Me</a></li>
-				<li><a href="menu.html" class="hover">Projects</a></li>
-				<li><a href="location.html"class="hover">Contact</a></li>
-			</ul>
-			<div class="icon menu-btn">
-				<i class="fas fa-bars"></i>
-			</div>
-		</div>
-	</nav>																																								
-    
-    <div class="content">
-        <h1> Hi There! </h1>
-   		<p> Are you looking for something modern, simple, yet meaningful in design? If yes, you're in the right place! </p>
-   		<p> I'm Feby Theresia, a Final Year Visual Communication Design student. </p>
-    </div>
-</body>
-<script>
-	const body = document.querySelector("body");
-	const navbar = document.querySelector(".navbar");
-	const menu = document.querySelector(".menu-list");
-	const menuBtn = document.querySelector(".menu-btn");
-	const cancelBtn = document.querySelector(".cancel-btn");
-	menuBtn.onclick = () => {
-		menu.classList.add("active");
-		menuBtn.classList.add("hide");
-		body.classList.add("disabledScroll");
-	}
-	cancelBtn.onclick = () => {
-		menu.classList.remove("active");
-		menuBtn.classList.remove("hide");
-		body.classList.remove("disabledScroll");
-	}
-	window.onscroll = () => {
-		this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
-	}
-</script>
+    <img src="Foto profile card.png">
+    <div class="profile">
+        <div class="description">
+            <h1>Feby <br>Theresia</h1>
+            <br> 
+            <p>Hi! I'm a passionate design student with interests across various creative fields, including graphic design, UI/UX, animation, and photography. I enjoy exploring clean, modern styles and love to explore different tools to bring fresh ideas to life through thoughtful design.</p>
+        </div>
 
+        <div class="contact">
+            <h2>Contact Me:</h2>
+            <br>
+            <div class="icons">
+                <i class="fa fa-instagram fa-3x"></i>
+                <i class="fa fa-linkedin fa-3x"></i>
+                <i class="fa fa-whatsapp fa-3x"></i>
+            </div>
+        </div>
+        
+    </div>
+
+</body>
 </html>
