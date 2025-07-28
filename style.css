@@ -32,3 +32,17 @@ p{
 .contact{
     margin-top: 15%;
 }
+
+a{
+    color: black;
+}
+
+a:hover{
+    color: #032762;
+}
+
+@media only screen and (min-width: 600px){
+    body { 
+     background-image: url('Foto\ profile\ card.png'); 
+    }
+}
